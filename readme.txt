@@ -4,7 +4,7 @@ DISCLAIMER: THIS IS MALWARE! DO NOT EXECUTE THIS CODE IF NOT SURE WHAT IT DOES!
 THIS CODE CAN OVERWRITE FILE SYSTEM! 
 
 Warning: code is so dirty and bad-formatted. Sorry bout that!
-Also sorry for mistakes in comments. I'm russian and wasn't used translator.
+Also sorry for mistakes in comments. I'm russian and didn't use translator.
 
 This malware was tested so many times (like about 100 releases!) on Computernewb UserVM.
 This trojan even has it's own wiki https://computernewb.com/wiki/ABOBUS
